@@ -50,28 +50,35 @@ h1 {
 #title-box {
     width: 100%;
     position: relative;
-}
-
-#title-box::after {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 3ch;
-    height: 100%;
-    content: "";
-    
-    /* There was some logic to this but idfk anymore */
-    box-shadow: inset 2.5ch 0px 1.5ch -0.5ch var(--bg);
+    display: flex;
+    flex-direction: row;
 }
 
 #aaa {
-    width: calc(50% + 1ch);
+    flex: 1 1 auto;
     display: inline-block;
     text-align: right;
     overflow: hidden;
     vertical-align: top;
     height: 100%;
-    position: relative
+    position: relative;
+    right: -1ch;
+}
+
+#lice {
+    position: relative;
+    left: 1ch;
+}
+
+#flex-spacer {
+    flex: 1 1 auto;
+}
+
+#aaa-gradient {
+    position: absolute;
+    width: calc(100% - 1ch);
+    height: 100%;
+    background-image: linear-gradient(to right, var(--bg), transparent);
 }
 
 #aaa-scroll {
