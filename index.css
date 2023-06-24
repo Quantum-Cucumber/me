@@ -1,0 +1,130 @@
+/* Generic */
+
+:root {
+    --bg: #191919;
+    --bg-secondary: #3A3B3C;
+    --text: #FFF;
+    --success: #6DA34D;
+    --error: #BB3434;
+    font-size: clamp(2.5vh, 1.8rem, 5vw);
+    font-family: Arial, Helvetica, sans-serif;
+    
+    --primary: #B52B65;
+    --secondary: #ED6663;
+    /*--primary: #616F39;
+    --secondary: #3E432E;*/
+}
+
+/* Page */
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content {
+    width: 75%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+#title-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#title-box::after {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 3ch;
+    height: 100%;
+    content: "";
+    
+    /* There was some logic to this but idfk anymore */
+    box-shadow: inset 2.5ch 0px 1.5ch -0.5ch var(--bg);
+}
+
+#title {
+    /* To allow absolute on children */
+    position: relative;
+    /* Offset "lice" */
+    left: 1ch;
+}
+
+#aaa {
+    position: absolute;
+    right: 100%;
+    overflow: hidden;
+}
+
+#aaa-scroll {
+    position: relative;
+}
+#title-box:hover #aaa-scroll {
+    animation: 0.5s linear infinite scroll;
+}
+
+@keyframes scroll {
+    from {
+        right: -2ch;
+    }
+    to {
+        right: -1ch;
+    }
+}
+
+.button {
+    text-decoration: none;
+    color: inherit;
+
+    background-color: var(--primary);
+    width: 100%;
+    text-align: center;
+    border-radius: 0.4em;
+    padding: 0.3em;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+
+    transition: border-radius 0.1s;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5ch;
+}
+.button:hover {
+    border-radius: 0.6em;
+}
+.button:active {
+    opacity: 0.7;
+}
+
+.button > svg {
+    height: 1em;
+    width: 1em;
+}
+
+.button path {
+    fill: var(--text)
+}
