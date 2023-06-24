@@ -128,3 +128,17 @@ body {
 .button path {
     fill: var(--text)
 }
+
+.button {
+    animation: slide-in calc((var(--offset) + 4) * 0.04s)  cubic-bezier(.66,.53,.59,1.46);
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(calc(var(--offset) * -0.2em - 0.5em));
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
