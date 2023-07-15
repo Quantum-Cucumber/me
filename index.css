@@ -143,3 +143,107 @@ h1 {
         transform: none;
     }
 }
+
+
+#dvd-wrapper {
+    position: fixed;
+    align-self: normal;
+
+    animation: bounceY 25s infinite linear;
+    animation-delay: -6.5s;  /* Start playing from middle */
+}
+
+#dvd {
+    position: absolute;
+    width: 5em;
+    height: 2.5em;
+    opacity: 0.5;
+
+    animation: bounceX 29s infinite linear;
+    animation-delay: -7.25s;  /* Start playing from middle */
+}
+
+#dvd path {
+    animation: rainbow-svg 20s infinite linear;
+}
+
+@keyframes bounceX {
+    0% {
+        transform: translateX(0%);
+    }   
+    50% {
+        transform: translateX(calc(100vw - 5em));
+    } 
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes bounceY {
+    0% {
+        transform: translateY(0%);
+    }   
+    50% {
+        transform: translateY(calc(100vh - 2.5em));
+    } 
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes rainbow-svg {
+    0% {
+        fill: #ffffff;
+    }
+    9.1% {
+        fill: #f498c0;
+    }
+    18.2% {
+        fill: #7cc0ea;
+    }
+    27.3% {
+        fill: #603917;
+    }
+    36.4% {
+        fill: #000000;
+    }
+    45.5% {
+        fill: #ee3124;
+    }
+    54.6% {
+        fill: #f57f29;
+    }
+    63.7% {
+        fill: #fff000;
+    }
+    72.8% {
+        fill: #58b947;
+    }
+    81.9% {
+        fill: #0054a6;
+    }
+    90% {
+        fill: #9f248f;
+    }
+    100% {
+        fill: #ffffff;
+    }
+}
+
+@keyframes trans-svg {
+    0% {
+        fill: #7cc0ea;
+    }
+    25% {
+        fill: #f498c0;
+    }
+    50% {
+        fill: #ffffff;
+    }
+    75% {
+        fill: #f498c0;
+    }
+    100% {
+        fill: #7cc0ea;
+    }
+}
