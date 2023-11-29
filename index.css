@@ -172,7 +172,7 @@ h1 {
         transform: translateX(0%);
     }   
     50% {
-        transform: translateX(calc(100vw - 5em));
+        transform: translateX(calc(100dvw - 5em));
     } 
     100% {
         transform: translateX(0%);
@@ -184,7 +184,7 @@ h1 {
         transform: translateY(0%);
     }   
     50% {
-        transform: translateY(calc(100vh - 2.5em));
+        transform: translateY(calc(100dvh - 2.5em));
     } 
     100% {
         transform: translateY(0%);
