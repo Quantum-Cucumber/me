@@ -161,6 +161,8 @@ h1 {
 
     animation: bounceX 29s infinite linear;
     animation-delay: -7.25s;  /* Start playing from middle */
+
+    pointer-events: none;
 }
 
 #dvd path {
